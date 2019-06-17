@@ -1,0 +1,21 @@
+# Example of setup to use Sublime merge tool for Mercurial
+# example user config (see "hg help config" for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+merge = smerge
+
+[merge-tools]
+smerge.executable = smerge
+# See https://www.mercurial-scm.org/wiki/MergeToolConfiguration for
+# explanation of arguments
+# This puts local changes on left, original branch on right and merge in middle.
+smerge.args = mergetool $base $local -o $output $other
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+#
+# pager =
+# progress =
+# color =
